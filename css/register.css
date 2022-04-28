@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background-image: url('https://i0.wp.com/www.estidia.eu/wp-content/uploads/2018/04/Savin-NY-Website-Background-Web.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+body {
+  font-size: 1rem;
+}
+
+.form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.register-header {
+  font-size: 2rem;
+}
+
+.register-form {
+  margin: 5rem auto;
+  width: 40rem;
+  padding: 1rem 3rem 1rem 3rem;
+  font-size: 1.1rem;
+  border: 0.1rem solid #2e86c1;
+  border-radius: 1%;
+  background-color: white;
+}
+
+.salutation,
+.first-name,
+.last-name,
+.birthday,
+.email,
+.password,
+.street,
+.plz,
+.phone-number,
+.city,
+.select-file,
+.state {
+  margin: 1rem 0;
+}
+
+.submit, .reset {
+  width: 20rem;
+  height: 3rem;
+  margin: 1rem 10rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+  height: 2rem;
+  width: 13rem;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+}
+
+input[type="radio"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: relative;
+  top: -0.2em;
+  vertical-align: top;
+  margin: 0.4rem 0;
+}
+
