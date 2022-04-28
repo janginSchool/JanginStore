@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <?php
+
+    echo "<html><body><center><table>\n\n";
+
+        // Open a file
+        $file = fopen("../users.csv", "r");
+  
+        // Fetching data from csv file row by row
+        while (($data = fgetcsv($file)) !== false) {
+  
+            // HTML tag for placing in row format
+            echo "<tr>";
+            foreach ($data as $i) {
+                echo "<td>" . htmlspecialchars($i) 
+                    . "</td>";
+            }
+            echo "</tr> \n";
+        }
+  
+        // Closing the file
+        fclose($file);
+  
+        echo "\n</table></center></body></html>";
+        ?>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="navbar-item" onclick="location.href='main.html';">Main</div>
+            <div class="navbar-item">Products</div>
+            <div class="navbar-item">Info</div>
+            <div class="navbar-item">Help</div>
+        </div>
+        <div class="navbar-right">
+            <div class="navbar-item" onclick="location.href='profile.html';">Profile</div>
+            <div class="navbar-item" onclick="location.href='register.html';">
+                Register
+            </div>
+            <div class="navbar-item" onclick="document.getElementById('login').style.display='block'"
+                style="width:auto;">Login</div>
+        </div>
+    </nav>
+    <div class="user-data">
+        <div class="user-salutation">
+            <?php echo $salutation ?>
+        </div>
+        <div class="user-first-name">
+            <?php echo $_POST['first-name'] ?>
+        </div>
+        <div class="user-last-name">
+            <?php echo $_POST['last-name'] ?>
+        </div>
+        <div class="user-birthday">
+            <?php echo $_POST['birthday'] ?>
+        </div>
+    </div>
+</body>
+
+</html>

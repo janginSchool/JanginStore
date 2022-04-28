@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order</title>
+  <link rel="stylesheet" href="../css/register.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+  <? php
+
+    session_start();
+
+    echo ini_get("session.save_path");
+
+    ?>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="navbar-item" onclick="location.href='main.html';">Main</div>
+      <div class="navbar-item">Products</div>
+      <div class="navbar-item">Info</div>
+      <div class="navbar-item">Help</div>
+    </div>
+    <div class="navbar-right">
+      <div class="navbar-item" onclick="location.href='profile.html';">Profile</div>
+      <div class="navbar-item" onclick="location.href='register.html';">
+        Register
+      </div>
+      <div class="navbar-item" onclick="document.getElementById('login').style.display='block'" style="width:auto;">
+        Login</div>
+    </div>
+  </nav>
+  <div class="register-form">
+    <form action="../action.php" method="post" enctype="multipart/form-data">
+      <div class="register-header">Register</div>
+      <div class="form">
+        <div class="left-column">
+          <div class="salutation">
+            <span class="anrede">Anrede:</span> <br />
+            <input type="radio" id="herr" name="salutation" value="Herr" autofocus />
+            <label for="herr">Herr</label>
+            <input type="radio" id="frau" name="salutation" value="Frau" />
+            <label for="frau">Frau</label><br />
+          </div>
+          <div class="first-name">
+            <label for="first-name">First name:</label><br />
+            <input type="text" id="first-name" name="firstname" required placeholder="First name" />
+          </div>
+          <div class="last-name">
+            <label for="last-name">Last name:</label><br />
+            <input type="text" id="last-name" name="lastname" required placeholder="Last name" />
+          </div>
+          <div class="street">
+            <label for="street">Straße und Haus Nr.:</label><br />
+            <input type="text" id="street" name="street" placeholder="Straße" />
+          </div>
+          <div class="plz">
+            <label for="plz">PLZ:</label><br />
+            <input type="text" id="plz" name="plz" placeholder="plz" pattern="[0-9]+" />
+          </div>
+          <div class="phone-number">
+            <label for="phone-number">Telefonnummer:</label><br />
+            <input type="text" id="phone-number" name="phonenumber" placeholder="Telefonnummer" />
+          </div>
+          <div class="select-file">
+            <label for="select-file">Datei:</label><br />
+            <input type="file" id="select-file" name="file" />
+          </div>
+        </div>
+        <div class="right-column">
+          <div class="birthday">
+            <label for="start">Birthday:</label><br />
+            <input type="date" id="start" name="birthday" />
+          </div>
+          <div class="email">
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" required placeholder="email" name="email" />
+          </div>
+          <div class="password">
+            <label for="pass">Password:</label><br />
+            <input type="password" id="pass" name="password" minlength="8" required placeholder="password" />
+          </div>
+          <div class="password">
+            <label for="confirm-password">Confirm Password:</label><br />
+            <input type="password" id="confirm-password" name="confirm-password" minlength="8" required
+              placeholder="password" />
+          </div>
+          <div class="city">
+            <label for="city">Wohnort:</label><br />
+            <input type="text" id="city" name="city" placeholder="Wohnort" />
+          </div>
+          <div class="state">
+            <label for="state">Bundesland:</label><br />
+            <select name="state" id="state">
+              <option value="burgenland">Burgenland</option>
+              <option value="kärnten">Kärnten</option>
+              <option value="niederösterreich">Niederösterreich</option>
+              <option value="oberösterreich">Oberösterreich</option>
+              <option value="salzburg">Salzburg</option>
+              <option value="steiermark">Steiermark</option>
+              <option value="tirol">Tirol</option>
+              <option value="vorarlberg">Vorarlberg</option>
+              <option value="wien">Wien</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+      <div class="buttons">
+        <input class="submit" type="submit" value="Submit" name="submit" />
+        <input class="reset" type="reset" value="Reset" />
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

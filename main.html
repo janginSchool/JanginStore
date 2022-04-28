@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jangin Store</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <div class="navbar-item" onclick="location.href='main.html';">Main</div>
+        <div class="navbar-item">Products</div>
+        <div class="navbar-item">Info</div>
+        <div class="navbar-item">Help</div>
+      </div>
+      <div class="navbar-right">
+        <div class="navbar-item" onclick="location.href='profile.html';">Profile</div>
+        <div class="navbar-item" onclick="location.href='register.html';">
+          Register
+        </div>
+        <div class="navbar-item" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</div>
+      </div>
+    </nav>
+    <header>
+      <div class="content">
+        <hgroup>
+          <h1>JANGIN</h1>
+          <i>Store</i>
+        </hgroup>
+      </div>
+    </header>
+    <div class="article-aside">
+      <article>
+        <div class="products-header">Products</div>
+        <div class="divider"></div>
+        <div class="products">
+          <div class="product">
+            <div class="product-title">Sennheiser 508697 HD 599</div>
+            <img
+              class="product-image"
+              src="https://m.media-amazon.com/images/I/81PByWkm7OL._AC_SL1500_.jpg"
+              alt=""
+            />
+            <div class="product-description">
+              <ul>
+                <li>
+                  Erstklassiger Kopfhörer mit offenem Rücken und um das Ohr
+                </li>
+                <li>Ohrumschließender, offener Premium-Kopfhörer</li>
+              </ul>
+            </div>
+            <div class="product-price">Price: 200,00 €</div>
+            <div class="product-order">Order</div>
+          </div>
+          <div class="product">
+            <div class="product-title">Sennheiser 508697 HD 599</div>
+            <img
+              class="product-image"
+              src="https://m.media-amazon.com/images/I/81PByWkm7OL._AC_SL1500_.jpg"
+              alt=""
+            />
+            <div class="product-description">
+              <ul>
+                <li>
+                  Erstklassiger Kopfhörer mit offenem Rücken und um das Ohr
+                </li>
+                <li>Ohrumschließender, offener Premium-Kopfhörer</li>
+              </ul>
+            </div>
+            <div class="product-price">Price: 200,00 €</div>
+            <div class="product-order">Order</div>
+          </div>
+          <div class="product">
+            <div class="product-title">Sennheiser 508697 HD 599</div>
+            <img
+              class="product-image"
+              src="https://m.media-amazon.com/images/I/81PByWkm7OL._AC_SL1500_.jpg"
+              alt=""
+            />
+            <div class="product-description">
+              <ul>
+                <li>
+                  Erstklassiger Kopfhörer mit offenem Rücken und um das Ohr
+                </li>
+                <li>Ohrumschließender, offener Premium-Kopfhörer</li>
+              </ul>
+            </div>
+            <div class="product-price">Price: 200,00 €</div>
+            <div class="product-order">Order</div>
+          </div>
+        </div>
+      </article>
+      <aside>
+        Our User reviews:
+        <div class="user-review">
+          <div class="username">Jangin Rasheed</div>
+          <div class="review-text">"This is the perfect store"</div>
+          <div class="review-date">03.03.2022 14:09</div>
+        </div>
+        <div class="user-review">
+          <div class="username">Heder Ibo</div>
+          <div class="review-text">"Amazing store"</div>
+          <div class="review-date">03.03.2022 14:15</div>
+        </div>
+      </aside>
+    </div>
+    <footer>
+      Contact us: Phone number: 0678 1234567 email: jangin9rasheed@gmail.com
+      <div class="footer-links">
+        <div class="footer-left">
+          <div>Products</div>
+          <div>About</div>
+          <div>Info</div>
+        </div>
+        <div class="footer-right">
+          <div>Help</div>
+          <div onclick="location.href='register.html';">Register</div>
+          <div>Login</div>
+        </div>
+      </div>
+    </footer>
+    <div id="login" class="modal">
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="container">
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter email" name="email" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <button type="submit">Login</button>
+        </div>
+    
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+    
+    <script>
+      // Get the modal
+      var modal = document.getElementById('login');
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      </script>
+      
+  </body>
+</html>
