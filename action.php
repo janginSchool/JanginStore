@@ -106,7 +106,7 @@ if (isset($_POST["submit"])) {
 
     $servername = 'janginstore.mysql.database.azure.com';
     $username = 'jangin@janginstore';
-    $password = 'Jangin95+';
+    $password = 'Blaugrana95830';
     $db = 'test';
 
     $connection = new PDO("mysql:host={$servername};dbname={$db}", $username, $password);
