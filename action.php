@@ -104,13 +104,13 @@ if (isset($_POST["submit"])) {
 
   try {
 
-    $servername = 'localhost';
-    $username = 'jangin';
-    $password = 'Jangin1234!';
+    $servername = 'janginstore.mysql.database.azure.com';
+    $username = 'jangin@janginstore';
+    $password = 'Jangin95+';
     $db = 'test';
 
     $connection = new PDO("mysql:host={$servername};dbname={$db}", $username, $password);
-    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sql = "insert into users values('$userId', '$firstname', '$lastname', '$salutation', '$email', '$birthday', '$userPasswordConfirmed', '$phonenumber', '$street', '$plz', '$city', '$state')";
 
