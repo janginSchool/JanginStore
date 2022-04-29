@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'JanginStore'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A1CC7182687243EAACFDD42B28434753 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7836B1C69639454EA8601330CD459572 }}
           package: .
